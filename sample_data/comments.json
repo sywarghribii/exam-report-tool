@@ -1,0 +1,156 @@
+{
+  "TC_00003": {
+    "comment": "Sensor calibration drift — see JIRA-42.",
+    "rerun": "yes",
+    "category": "Environment",
+    "author": "intern",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00004": {
+    "comment": "Known open defect, do not re-run yet.",
+    "rerun": "no",
+    "category": "Product defect",
+    "author": "intern",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00005": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00007": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00009": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00011": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00012": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00015": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00017": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00019": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00023": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00029": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00002": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00006": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00010": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00013": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00016": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00021": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00024": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00025": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00034": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  },
+  "TC_00035": {
+    "comment": "",
+    "rerun": "",
+    "category": "Untriaged",
+    "author": "",
+    "updated_at": "2026-08-18T10:41:44+00:00"
+  }
+}

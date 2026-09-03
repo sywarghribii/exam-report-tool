@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="{{ url_for('tests') }}" class="back-link">&larr; Back to Tests</a>
+
+<div class="review-header">
+    <span class="review-breadcrumb">Test report management &nbsp;›&nbsp; Report filter</span>
+    <h2>Review: {{ tc.name }}</h2>
+    <p class="text-muted">{{ tc.test_case_id }} &middot; {{ tc.group_path_str }}
+        <span class="badge {{ 'bg-success' if tc.final_valuation=='PASS' else 'bg-danger' }}">{{ tc.final_valuation }}</span>
+    </p>
+    {% if tc.metadata.get('Link') %}
+    <p><a href="{{ tc.metadata.get('Link') }}" target="_blank" class="ext-link">&#128279; View in EXAM</a></p>
+{% endif %}
+</div>
+
+<div class="row">
+    <!-- Previous reviews -->
+    <div class="col-md-5">
+        <div class="review-panel">
+            <h6>Previous reviews</h6>
+            <input type="text" class="form-control form-control-sm mb-3" placeholder="Search comments">
+
+            {% if history %}
+                {% for h in history %}
+                <div class="review-item">
+                    <div class="review-item-date">{{ h.updated_at[:16] }}</div>
+                    <div class="review-item-summary">{{ h.defect_class or 'Unclassified' }}</div>
+                    <div class="review-item-comment">{{ h.comment }}</div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p class="text-muted small">No previous reviews yet.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Create review -->
+    <div class="col-md-7">
+        <div class="review-panel">
+            <h6>Create review</h6>
+            <form method="POST">
+                <div class="mb-3">
+                    <label class="form-label small">Comment *</label>
+                    <textarea name="comment" class="form-control" rows="4" required></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label small">Reevaluation</label>
+                        <select name="reevaluation" class="form-select">
+                            <option>FAILED</option>
+                            <option>PASSED</option>
+                            <option>INCONCLUSIVE</option>
+                        </select>
+                    </div>
+                   <div class="col-md-6 mb-3">
+                  <label class="form-label small">Defect class</label>
+                  <select name="defect_class" class="form-select">
+                    <option value="Unclassified" {% if suggested_class == 'Unclassified' %}selected{% endif %}>Unclassified</option>
+                    <option value="Environment" {% if suggested_class == 'Environment' %}selected{% endif %}>Environment</option>
+                    <option value="Product defect" {% if suggested_class == 'Product defect' %}selected{% endif %}>Product defect</option>
+                    <option value="Known Issue" {% if suggested_class == 'Known Issue' %}selected{% endif %}>Known Issue</option>
+                 </select>
+    {% if suggestion_reason %}
+    <div class="ai-suggestion mt-2">
+        <span class="ai-badge">Suggested</span>
+        {{ suggestion_reason }}
+    </div>
+    {% endif %}
+</div>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" name="rerun" value="yes" class="form-check-input" id="rerunCheck">
+                    <label class="form-check-label small" for="rerunCheck">Mark test execution invalid</label>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label small">Tags</label><br>
+                    <span class="tag-pill">Known Issue &times;</span>
+                    <span class="tag-add">+ Add</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create review</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% if tc.final_valuation == "FAIL" %}
+<div class="alert alert-danger mt-4">
+    <strong>Failure detail:</strong><br>
+    {{ tc.fails_text() }}
+</div>
+{% endif %}
+{% endblock %}

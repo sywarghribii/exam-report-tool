@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>KPIT Report Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="d-flex">
+    <nav class="sidebar">
+        <h4 class="text-white px-3 py-3">EXAM Tool</h4>
+        <a href="{{ url_for('dashboard') }}" class="nav-link {% if page=='dashboard' %}active{% endif %}">Dashboard</a>
+        <a href="{{ url_for('tests') }}" class="nav-link {% if page=='tests' %}active{% endif %}">Tests</a>
+        <a href="{{ url_for('analysis') }}" class="nav-link {% if page=='analysis' %}active{% endif %}">Failure Analysis</a>
+        <a href="{{ url_for('history') }}" class="nav-link {% if page=='history' %}active{% endif %}">History</a>
+        <a href="{{ url_for('compare') }}" class="nav-link {% if page=='compare' %}active{% endif %}">Compare Runs</a>
+        <a href="{{ url_for('home') }}" class="nav-link {% if page=='home' %}active{% endif %}">Import</a>
+    </nav>
+
+    <main class="content p-4 w-100">
+        {% if page == 'home' %}
+        <div class="import-page">
+            <h2 class="import-title">Import Test Reports</h2>
+            <p class="import-subtitle">Upload one or more EXAM XML reports to generate your dashboard</p>
+
+            <div class="import-card">
+                <form method="POST" enctype="multipart/form-data" id="importForm">
+                    <label class="dropzone" for="fileInput">
+                        <div class="dropzone-icon">&#128193;</div>
+                        <div class="dropzone-text">Click to select XML files</div>
+                        <div class="dropzone-hint" id="fileNames">or drag and drop them here</div>
+                        <input type="file" name="xml_files" id="fileInput" multiple accept=".xml" hidden>
+                    </label>
+                    <button type="submit" class="btn btn-import mt-3">Import Reports</button>
+                </form>
+            </div>
+
+            <div class="import-steps">
+                <div class="import-step">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Select one or several EXAM XML reports</div>
+                </div>
+                <div class="import-step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Reports are parsed and analyzed automatically</div>
+                </div>
+                <div class="import-step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">View results in the Dashboard</div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const fileInput = document.getElementById('fileInput');
+            const fileNames = document.getElementById('fileNames');
+            fileInput.addEventListener('change', function() {
+                if (fileInput.files.length > 0) {
+                    var names = [];
+                    for (var j = 0; j < fileInput.files.length; j++) {
+                        names.push(fileInput.files[j].name);
+                    }
+                    fileNames.textContent = names.join(', ');
+                }
+            });
+        </script>
+        {% else %}
+        {% block content %}{% endblock %}
+        {% endif %}
+    </main>
+</div>
+</body>
+</html>

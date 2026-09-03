@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<TestExecution count="10">
+  <Test id="TC_00003" title="Fensterheber Funktionstest 3" path="Root / Body / Windows"/>
+  <Test id="TC_00004" title="Fensterheber Funktionstest 4" path="Root / Body / Windows"/>
+  <Test id="TC_00009" title="Fensterheber Funktionstest 9" path="Root / Body / Doors"/>
+  <Test id="TC_00017" title="Fensterheber Funktionstest 17" path="Root / Comfort / Climate"/>
+  <Test id="TC_00023" title="Fensterheber Funktionstest 23" path="Root / Comfort / Lighting"/>
+  <Test id="TC_00029" title="Fensterheber Funktionstest 29" path="Root / Powertrain / Engine"/>
+  <Test id="TC_00013" title="Fensterheber Funktionstest 13" path="Root / Body / Seats"/>
+  <Test id="TC_00016" title="Fensterheber Funktionstest 16" path="Root / Comfort / Climate"/>
+  <Test id="TC_00021" title="Fensterheber Funktionstest 21" path="Root / Comfort / Lighting"/>
+  <Test id="TC_00025" title="Fensterheber Funktionstest 25" path="Root / Comfort / Lighting"/>
+</TestExecution>

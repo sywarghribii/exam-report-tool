@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+uploads/
+exam_reports.db
+comments_store.json
+sample_data/

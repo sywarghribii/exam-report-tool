@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="dash-header">
+    <h2>Tests</h2>
+    <p class="text-muted">Browse every test case from the latest import, with full failure details</p>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="mini-stat mini-total">
+            <span class="mini-value">{{ total }}</span>
+            <span class="mini-label">Total</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="mini-stat mini-pass">
+            <span class="mini-value">{{ passed }}</span>
+            <span class="mini-label">Passed</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="mini-stat mini-fail">
+            <span class="mini-value">{{ failed }}</span>
+            <span class="mini-label">Failed</span>
+        </div>
+    </div>
+</div>
+
+<div class="tests-toolbar">
+    <select id="statusFilter" class="form-select">
+        <option value="Tous">All statuses</option>
+        <option value="PASS">Passed only</option>
+        <option value="FAIL">Failed only</option>
+    </select>
+    <input type="text" id="searchBox" class="form-control" placeholder="Search by name, group or ID...">
+</div>
+
+<div class="tests-card">
+    <table class="table tests-table" id="testsTable">
+        <thead>
+            <th>ID</th><th>Name</th><th>Group</th><th>Status</th>
+            <th>Platform</th><th>Variant</th><th>Project</th><th>Duration</th>
+            <th>Failure Details</th>       
+         </thead>
+        <tbody>
+        {% for tc in test_cases %}
+            <tr class="clickable-row"
+                onclick="window.location='{{ url_for('test_detail', test_case_id=tc.test_case_id) }}'"
+                data-status="{{ tc.final_valuation }}"
+                data-search="{{ (tc.test_case_id ~ ' ' ~ tc.name ~ ' ' ~ tc.group_path_str) | lower }}">
+                <td class="mono">{{ tc.test_case_id }}</td>
+                <td>{{ tc.name }}</td>
+                <td class="text-muted">{{ tc.group_path_str }}</td>
+                <td>
+                    <span class="result-badge {{ 'result-passed' if tc.final_valuation == 'PASS' else 'result-failed' }}">
+                        {{ tc.final_valuation }}
+                    </span>
+                </td>
+                <td>{{ tc.metadata.get('Platform', '-') }}</td>
+                <td>{{ tc.metadata.get('Variante', '-') }}</td>
+                <td>{{ tc.metadata.get('Projekt', '-') }}</td>
+                <td>{{ tc.duration }}</td>
+                <td class="fails-cell">{% if tc.final_valuation == "FAIL" %}{{ tc.fails_text() }}{% endif %}</td>
+            </tr>
+        {% else %}
+            <tr><td colspan="9" class="text-center text-muted py-4">No tests imported yet.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script>
+const statusFilter = document.getElementById('statusFilter');
+const searchBox = document.getElementById('searchBox');
+const rows = document.querySelectorAll('#testsTable tbody tr[data-status]');
+
+function applyFilters() {
+    const status = statusFilter.value;
+    const search = searchBox.value.toLowerCase();
+    rows.forEach(row => {
+        const matchStatus = status === 'Tous' || row.dataset.status === status;
+        const matchSearch = row.dataset.search.includes(search);
+        row.style.display = (matchStatus && matchSearch) ? '' : 'none';
+    });
+}
+statusFilter.addEventListener('change', applyFilters);
+searchBox.addEventListener('input', applyFilters);
+</script>
+{% endblock %}

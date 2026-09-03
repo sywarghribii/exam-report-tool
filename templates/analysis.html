@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="dash-header">
+    <h2>Failure Analysis</h2>
+    <p class="text-muted">Similar failures are automatically grouped together, so recurring issues stand out instantly instead of being buried in dozens of separate error messages.</p>
+</div>
+
+{% if clusters %}
+<div class="cluster-list">
+    {% for cluster in clusters %}
+<div class="cluster-card" style="margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); overflow: hidden;">
+    <!-- En-tête cliquable pour dérouler les détails -->
+    <div class="cluster-header-click" onclick="toggleDetails('details-{{ loop.index }}')" style="cursor: pointer; padding: 15px; display: flex; align-items: center; background: #fff;">
+        <div class="cluster-rank rank-{{ 1 if loop.index <= 2 else (2 if loop.index <= 5 else 3) }}">
+            #{{ loop.index }}
+        </div>
+
+        <div class="cluster-body" style="flex-grow: 1; margin-left: 15px;">
+            <div class="cluster-top" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px;">
+                <span class="cluster-count" style="font-weight: bold; color: #333;">
+                    {{ cluster.size }} occurrence{{ 's' if cluster.size > 1 else '' }} 
+                    <span style="font-weight: normal; color: #666; font-size: 0.9em;">
+                        ({{ cluster.affected_test_cases | length }} Test Cases impactés)
+                    </span>
+                </span>
+                <div class="cluster-bar-track" style="width: 40%; background: #eee; height: 8px; border-radius: 4px; overflow: hidden;">
+                    <div class="cluster-bar-fill" style="width: {{ (cluster.size / max_size * 100) | round(0) }}%; height: 100%; background: #dc3545; transition: width 0.3s ease;"></div>
+                </div>
+            </div>
+            <div class="cluster-signature" style="font-family: monospace; font-size: 0.95em; color: #212529; word-break: break-all;">
+                {{ cluster.signature }}
+            </div>
+        </div>
+        <div class="cluster-arrow" style="font-size: 1.2em; color: #999; margin-left: 15px;">▼</div>
+    </div>
+
+    <!-- Section Détails cachée (Déroulante) -->
+    <div id="details-{{ loop.index }}" class="cluster-details-content" style="display: none; background: #f8f9fa; border-top: 1px solid #e9ecef; padding: 15px;">
+        <div style="margin-bottom: 12px; padding: 10px; background: #fff; border-left: 4px solid #6c757d; border-radius: 0 4px 4px 0;">
+            <strong style="font-size: 0.9em; color: #495057;">Example of a raw log extracted from the XML:</strong>
+            <div style="font-family: monospace; font-size: 0.85em; margin-top: 5px; color: #343a40; white-space: pre-wrap;">{{ cluster.example() }}</div>
+        </div>
+
+        <strong style="font-size: 0.9em; color: #495057; display: block; margin-bottom: 8px;">Complete list of affected test cases:</strong>
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; background: #fff; font-size: 0.85em; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+                <thead>
+                    <tr style="background: #e9ecef; color: #495057; text-align: left;">
+                        <th style="padding: 8px 12px; border: 1px solid #dee2e6;">Test Case ID</th>
+                        <th style="padding: 8px 12px; border: 1px solid #dee2e6;">Nom du Test</th>
+                        <th style="padding: 8px 12px; border: 1px solid #dee2e6;">Composant Automobile (Group Path)</th>
+                    </tr>
+                </thead>
+                <tbody>
+         {# Regroupement des occurrences par TestCase ID pour éliminer les doublons graphiques #}
+          {% for group in cluster.occurrences | groupby('test_case_id') %}
+          {# On récupère la première occurrence du groupe pour afficher les détails du test #}
+            {% set occ = group.list[0] %}
+            <tr style="border-bottom: 1px solid #dee2e6;">
+              <td style="padding: 8px 12px; font-weight: bold; color: #0056b3; border: 1px solid #dee2e6;">
+                {{ occ.test_case_id }}
+               </td>
+              <td style="padding: 8px 12px; border: 1px solid #dee2e6;">
+                {{ occ.test_case_name }}
+               </td>
+              <td style="padding: 8px 12px; color: #6c757d; font-family: monospace; border: 1px solid #dee2e6;">
+                {{ occ.group_path }}
+              </td>
+        </tr>
+    {% endfor %}
+</tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<!-- Script JavaScript pour l'effet d'accordéon dynamique -->
+<script>
+function toggleDetails(id) {
+    var element = document.getElementById(id);
+    var arrow = element.previousElementSibling.querySelector('.cluster-arrow');
+    if (element.style.display === "none") {
+        element.style.display = "block";
+        arrow.innerHTML = "▲";
+    } else {
+        element.style.display = "none";
+        arrow.innerHTML = "▼";
+    }
+}
+</script>
+
+</div>
+{% else %}
+<div class="empty-state">
+    <p>No data yet. Import a report from the <a href="{{ url_for('home') }}">Import</a> page to see the failure analysis.</p>
+</div>
+{% endif %}
+
+{% endblock %}

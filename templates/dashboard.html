@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="dash-header">
+    <h2>Dashboard</h2>
+    <p class="text-muted">Overview of the latest test results</p>
+</div>
+<div class="chatbot-card mb-4">
+    <h6>Ask about this report</h6>
+    <div class="chatbot-messages" id="chatMessages">
+        <div class="chat-bubble bot">Hi! Ask me </div>
+    </div>
+    <div class="chatbot-input-row">
+        <input type="text" id="chatInput" class="form-control" placeholder="Ask a question about the results...">
+        <button class="btn btn-import" onclick="sendQuestion()">Ask</button>
+    </div>
+</div>
+
+<script>
+function sendQuestion() {
+    const input = document.getElementById('chatInput');
+    const question = input.value.trim();
+    if (!question) return;
+
+    const messages = document.getElementById('chatMessages');
+    messages.innerHTML += `<div class="chat-bubble user">${question}</div>`;
+    input.value = '';
+    messages.scrollTop = messages.scrollHeight;
+
+    fetch('/ask', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({question: question})
+    })
+    .then(res => res.json())
+    .then(data => {
+        messages.innerHTML += `<div class="chat-bubble bot">${data.answer.replace(/\n/g, '<br>')}</div>`;
+        messages.scrollTop = messages.scrollHeight;
+    });
+}
+
+document.getElementById('chatInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') sendQuestion();
+});
+</script>
+{% if anomalies %}
+<div class="anomaly-banner mb-4">
+    <div class="anomaly-icon">&#9888;</div>
+    <div class="anomaly-content">
+        <strong>Anomaly Detected</strong>
+        <ul>
+        {% for a in anomalies %}
+            <li>
+                <strong>{{ a.module }}</strong> — failure rate jumped to
+                <strong>{{ a.latest_rate }}%</strong> (average: {{ a.average_rate }}%)
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endif %}
+
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="kpi-card kpi-total">
+            <div class="kpi-value">{{ total }}</div>
+            <div class="kpi-label">Total Tests</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="kpi-card kpi-pass">
+            <div class="kpi-value">{{ passed }}</div>
+            <div class="kpi-label">Passed</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="kpi-card kpi-fail">
+            <div class="kpi-value">{{ failed }}</div>
+            <div class="kpi-label">Failed</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="kpi-card kpi-rate">
+            <div class="kpi-value">{{ pass_rate }}%</div>
+            <div class="kpi-label">Pass Rate</div>
+        </div>
+    </div>
+</div>
+
+<div class="chart-card mb-4">
+    <h6>Trend Over Time</h6>
+    <canvas id="trendChart" height="80"></canvas>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4 mx-auto">
+        <div class="chart-card">
+            <h6>Overall Distribution</h6>
+            <canvas id="donutChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<h5 class="mb-3">Results by Module</h5>
+<div class="row g-4 mt-2">
+    {% for group, stats in group_stats.items() %}
+    <div class="col-md-4 mb-4">
+        <div class="module-chart-card">
+            <div class="chart-card-header">
+                <h6>{{ group.split('/')[-1] }}</h6>
+                <div class="chart-card-icons">
+                    <a href="#" class="icon-btn" title="Refresh" onclick="return false;">&#8635;</a>
+                    <a href="#" class="icon-btn" title="Edit" onclick="return false;">&#9998;</a>
+                    <a href="#" class="icon-btn" title="Info" onclick="return false;">&#9432;</a>
+                </div>
+            </div>
+
+            <div class="legend-badges">
+                <span class="legend-badge badge-error">ERROR</span>
+                <span class="legend-badge badge-failed">FAILED</span>
+                <span class="legend-badge badge-inconc">INCONC</span>
+                <span class="legend-badge badge-passed">PASSED</span>
+                <span class="legend-badge badge-none">NONE</span>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="chart-{{ loop.index }}" height="160"></canvas>
+            </div>
+
+            <div class="chart-card-footer">
+                Time zone: GMT<br>
+                Last refresh: {{ current_time }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// ---- 1) Trend Over Time ----
+const trendData = {{ trend_data | tojson | safe }};
+const trendLabels = Object.keys(trendData);
+new Chart(document.getElementById('trendChart'), {
+    type: 'line',
+    data: {
+        labels: trendLabels,
+        datasets: [
+            { label: 'Passed', data: trendLabels.map(d => trendData[d].PASS), borderColor: '#22c55e', backgroundColor: 'rgba(34,197,94,0.1)', tension: 0.3, fill: true },
+            { label: 'Failed', data: trendLabels.map(d => trendData[d].FAIL), borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,0.1)', tension: 0.3, fill: true }
+        ]
+    },
+    options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+});
+
+// ---- 2) Overall Distribution (donut) ----
+new Chart(document.getElementById('donutChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['Passed', 'Failed'],
+        datasets: [{
+            data: [{{ passed }}, {{ failed }}],
+            backgroundColor: ['#86efac', '#fecaca'],
+            hoverBackgroundColor: ['#4ade80', '#f87171'],
+            borderWidth: 4,
+            borderColor: '#ffffff'
+        }]
+    },
+    options: {
+        responsive: true,
+        cutout: '72%',
+        plugins: {
+            legend: { position: 'bottom', labels: { usePointStyle: true, pointStyle: 'circle', padding: 16 } },
+            tooltip: {
+                callbacks: {
+                    label: function(ctx) {
+                        const total = {{ passed }} + {{ failed }};
+                        const pct = total ? Math.round(ctx.parsed / total * 100) : 0;
+                        return ctx.label + ': ' + ctx.parsed + ' (' + pct + '%)';
+                    }
+                }
+            }
+        }
+    },
+    plugins: [{
+        id: 'centerText',
+        beforeDraw(chart) {
+            const { width, height, ctx } = chart;
+            ctx.restore();
+            ctx.font = "bold 32px Segoe UI";
+            ctx.fillStyle = "#1e3a8a";
+            ctx.textBaseline = "middle";
+            ctx.textAlign = "center";
+            ctx.fillText("{{ pass_rate }}%", width / 2, height / 2 - 10);
+            ctx.font = "12px Segoe UI";
+            ctx.fillStyle = "#94a3b8";
+            ctx.fillText("Pass Rate", width / 2, height / 2 + 15);
+            ctx.save();
+        }
+    }]
+});
+
+// ---- 3) Results by Module (one chart per group) ----
+const groupTrend = {{ group_trend | tojson | safe }};
+let i = 1;
+for (const [group, dateData] of Object.entries(groupTrend)) {
+    const dates = Object.keys(dateData);
+    const errorData  = dates.map(d => dateData[d].ERROR  || 0);
+    const failedData = dates.map(d => dateData[d].FAIL   || 0);
+    const inconcData = dates.map(d => dateData[d].INCONC || 0);
+    const passedData = dates.map(d => dateData[d].PASS   || 0);
+    const noneData   = dates.map(d => dateData[d].NONE   || 0);
+
+    new Chart(document.getElementById('chart-' + i), {
+        type: 'bar',
+        data: {
+            labels: dates,
+            datasets: [
+                { label: 'ERROR',  data: errorData,  backgroundColor: '#fed7aa', borderRadius: 4 },
+                { label: 'FAILED', data: failedData, backgroundColor: '#fecaca', borderRadius: 4 },
+                { label: 'INCONC', data: inconcData, backgroundColor: '#fef08a', borderRadius: 4 },
+                { label: 'PASSED', data: passedData, backgroundColor: '#86efac', borderRadius: 4 },
+                { label: 'NONE',   data: noneData,   backgroundColor: '#93c5fd', borderRadius: 4 }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false } },
+            scales: {
+                x: { stacked: true, grid: { display: false }, ticks: { font: { size: 9 }, maxRotation: 45 } },
+                y: { stacked: true, beginAtZero: true, grid: { color: '#f1f5f9' }, ticks: { stepSize: 4 } }
+            }
+        }
+    });
+    i++;
+}
+</script>
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="dash-header">
+    <h2>Compare Runs</h2>
+    <p class="text-muted">Select two imports to see what changed between them</p>
+</div>
+
+<div class="compare-card mb-4">
+    <form method="POST" action="{{ url_for('compare_run') }}" class="compare-form">
+        <div class="compare-select-group">
+            <label class="form-label small">Baseline (before)</label>
+            <select name="import_a" class="form-select">
+                {% for imp in imports %}
+                <option value="{{ imp.id }}" {% if selected_a == imp.id %}selected{% endif %}>{{ imp.label }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="compare-arrow">&#8594;</div>
+
+        <div class="compare-select-group">
+            <label class="form-label small">Compared to (after)</label>
+            <select name="import_b" class="form-select">
+                {% for imp in imports %}
+                <option value="{{ imp.id }}" {% if selected_b == imp.id %}selected{% endif %}>{{ imp.label }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-import">Compare</button>
+    </form>
+</div>
+
+{% if result %}
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="mini-stat mini-pass">
+            <span class="mini-value">{{ result.fixed | length }}</span>
+            <span class="mini-label">Fixed</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="mini-stat mini-fail">
+            <span class="mini-value">{{ result.regressed | length }}</span>
+            <span class="mini-label">Regressed</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="mini-stat mini-total">
+            <span class="mini-value">{{ result.unchanged | length }}</span>
+            <span class="mini-label">Unchanged</span>
+        </div>
+    </div>
+</div>
+
+{% if result.regressed %}
+<h5 class="mb-3 compare-section-title regressed-title">&#9888; Regressions</h5>
+<div class="compare-card mb-4">
+    <table class="table table-sm">
+        <thead><tr><th>ID</th><th>Name</th><th>Group</th><th>Before</th><th>After</th></tr></thead>
+        <tbody>
+        {% for t in result.regressed %}
+            <tr>
+                <td><a href="{{ url_for('test_detail', test_case_id=t.id) }}">{{ t.id }}</a></td>
+                <td>{{ t.name }}</td>
+                <td class="text-muted">{{ t.group }}</td>
+                <td><span class="result-badge result-passed">{{ t.before }}</span></td>
+                <td><span class="result-badge result-failed">{{ t.after }}</span></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+{% if result.fixed %}
+<h5 class="mb-3 compare-section-title fixed-title">&#9989; Fixed</h5>
+<div class="compare-card mb-4">
+    <table class="table table-sm">
+        <thead><tr><th>ID</th><th>Name</th><th>Group</th><th>Before</th><th>After</th></tr></thead>
+        <tbody>
+        {% for t in result.fixed %}
+            <tr>
+                <td><a href="{{ url_for('test_detail', test_case_id=t.id) }}">{{ t.id }}</a></td>
+                <td>{{ t.name }}</td>
+                <td class="text-muted">{{ t.group }}</td>
+                <td><span class="result-badge result-failed">{{ t.before }}</span></td>
+                <td><span class="result-badge result-passed">{{ t.after }}</span></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+{% if not result.fixed and not result.regressed %}
+<div class="empty-state">
+    <p>No changes detected between these two runs — {{ result.unchanged | length }} tests stayed identical.</p>
+</div>
+{% endif %}
+{% endif %}
+{% endblock %}

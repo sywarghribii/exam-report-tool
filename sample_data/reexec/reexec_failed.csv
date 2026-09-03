@@ -1,0 +1,23 @@
+TestCaseID;Name;GroupPath;Reason
+TC_00003;Fensterheber Funktionstest 3;Root / Body / Windows;final verdict FAIL
+TC_00004;Fensterheber Funktionstest 4;Root / Body / Windows;final verdict FAIL
+TC_00005;Fensterheber Funktionstest 5;Root / Body / Windows;final verdict FAIL
+TC_00007;Fensterheber Funktionstest 7;Root / Body / Doors;final verdict FAIL
+TC_00009;Fensterheber Funktionstest 9;Root / Body / Doors;final verdict FAIL
+TC_00011;Fensterheber Funktionstest 11;Root / Body / Seats;final verdict FAIL
+TC_00012;Fensterheber Funktionstest 12;Root / Body / Seats;final verdict FAIL
+TC_00015;Fensterheber Funktionstest 15;Root / Body / Seats;final verdict FAIL
+TC_00017;Fensterheber Funktionstest 17;Root / Comfort / Climate;final verdict FAIL
+TC_00019;Fensterheber Funktionstest 19;Root / Comfort / Climate;final verdict FAIL
+TC_00023;Fensterheber Funktionstest 23;Root / Comfort / Lighting;final verdict FAIL
+TC_00029;Fensterheber Funktionstest 29;Root / Powertrain / Engine;final verdict FAIL
+TC_00002;Fensterheber Funktionstest 2;Root / Body / Windows;final verdict FAIL
+TC_00006;Fensterheber Funktionstest 6;Root / Body / Doors;final verdict FAIL
+TC_00010;Fensterheber Funktionstest 10;Root / Body / Doors;final verdict FAIL
+TC_00013;Fensterheber Funktionstest 13;Root / Body / Seats;final verdict FAIL
+TC_00016;Fensterheber Funktionstest 16;Root / Comfort / Climate;final verdict FAIL
+TC_00021;Fensterheber Funktionstest 21;Root / Comfort / Lighting;final verdict FAIL
+TC_00024;Fensterheber Funktionstest 24;Root / Comfort / Lighting;final verdict FAIL
+TC_00025;Fensterheber Funktionstest 25;Root / Comfort / Lighting;final verdict FAIL
+TC_00034;Fensterheber Funktionstest 34;Root / Powertrain / Transmission;final verdict FAIL
+TC_00035;Fensterheber Funktionstest 35;Root / Powertrain / Transmission;final verdict FAIL

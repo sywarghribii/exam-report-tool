@@ -1,0 +1,845 @@
+<?xml version="1.0" ?>
+<examReport generated="synthetic">
+  <groups name="Root">
+    <group name="Body">
+      <group name="Windows">
+        <testCase testCaseId="TC_00001" name="Fensterheber Funktionstest 1" starttime="2026-07-15T16:10:00.000+02:00" duration="55" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V2"/>
+            <metadataItem label="Platform" value="MEB"/>
+            <metadataItem label="Projekt" value="PROJ_A"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/1"/>
+          </metadata>
+          <subtests name="FH Position Komfortoeffnung von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="54"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="29"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00002" name="Fensterheber Funktionstest 2" starttime="2026-07-15T16:10:00.000+02:00" duration="108" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/2"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="4"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00003" name="Fensterheber Funktionstest 3" starttime="2026-07-15T16:10:00.000+02:00" duration="217" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_A"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/3"/>
+          </metadata>
+          <subtests name="FH Position Komfortoeffnung von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="97"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="89"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="35"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenLinks nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="80"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00004" name="Fensterheber Funktionstest 4" starttime="2026-07-15T16:10:00.000+02:00" duration="285" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V1"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/4"/>
+          </metadata>
+          <subtests name="FH Position Komfortoeffnung von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="28"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="61"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Offen von HintenRechts nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="45"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Offen von HintenLinks nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="41"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00005" name="Fensterheber Funktionstest 5" starttime="2026-07-15T16:10:00.000+02:00" duration="235" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_A"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/5"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="46"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von BeifahrerTuer nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="94"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+      </group>
+      <group name="Doors">
+        <testCase testCaseId="TC_00006" name="Fensterheber Funktionstest 6" starttime="2026-07-15T16:10:00.000+02:00" duration="177" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V2"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/6"/>
+          </metadata>
+          <subtests name="FH Position Offen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="95"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="37"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Offen von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="-1"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00007" name="Fensterheber Funktionstest 7" starttime="2026-07-15T16:10:00.000+02:00" duration="213" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="MEB"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/7"/>
+          </metadata>
+          <subtests name="FH Position Offen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="5"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="12"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von BeifahrerTuer nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="8"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00008" name="Fensterheber Funktionstest 8" starttime="2026-07-15T16:10:00.000+02:00" duration="112" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="MEB"/>
+            <metadataItem label="Projekt" value="PROJ_A"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/8"/>
+          </metadata>
+          <subtests name="FH Position Komfortoeffnung von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="5"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="45"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Offen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="34"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00009" name="Fensterheber Funktionstest 9" starttime="2026-07-15T16:10:00.000+02:00" duration="13" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_A"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/9"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="60"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von HintenRechts nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="98"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Offen von FahrerTuer nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="94"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00010" name="Fensterheber Funktionstest 10" starttime="2026-07-15T16:10:00.000+02:00" duration="203" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V1"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/10"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="53"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="41"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+      </group>
+      <group name="Seats">
+        <testCase testCaseId="TC_00011" name="Fensterheber Funktionstest 11" starttime="2026-07-15T16:10:00.000+02:00" duration="9" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V1"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_C"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/11"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="68"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="82"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Offen von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="24"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Offen von FahrerTuer nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="39"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Offen von HintenLinks nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="54"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00012" name="Fensterheber Funktionstest 12" starttime="2026-07-15T16:10:00.000+02:00" duration="153" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/12"/>
+          </metadata>
+          <subtests name="FH Position Offen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="15"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="60"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von HintenLinks nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="8"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von FahrerTuer nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="17"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00013" name="Fensterheber Funktionstest 13" starttime="2026-07-15T16:10:00.000+02:00" duration="264" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_C"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/13"/>
+          </metadata>
+          <subtests name="FH Position Komfortoeffnung von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="23"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Offen von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="0"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="50"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00014" name="Fensterheber Funktionstest 14" starttime="2026-07-15T16:10:00.000+02:00" duration="201" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_C"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/14"/>
+          </metadata>
+          <subtests name="FH Position Komfortoeffnung von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="-1"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Offen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="35"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00015" name="Fensterheber Funktionstest 15" starttime="2026-07-15T16:10:00.000+02:00" duration="37" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_C"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/15"/>
+          </metadata>
+          <subtests name="FH Position Offen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="96"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von FahrerTuer nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="57"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+      </group>
+    </group>
+    <group name="Comfort">
+      <group name="Climate">
+        <testCase testCaseId="TC_00016" name="Fensterheber Funktionstest 16" starttime="2026-07-15T16:10:00.000+02:00" duration="155" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="MEB"/>
+            <metadataItem label="Projekt" value="PROJ_A"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/16"/>
+          </metadata>
+          <subtests name="FH Position Komfortoeffnung von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="54"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00017" name="Fensterheber Funktionstest 17" starttime="2026-07-15T16:10:00.000+02:00" duration="31" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V1"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/17"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="39"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="43"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Offen von BeifahrerTuer nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="63"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenRechts nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="45"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Offen von HintenRechts nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="23"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00018" name="Fensterheber Funktionstest 18" starttime="2026-07-15T16:10:00.000+02:00" duration="51" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V1"/>
+            <metadataItem label="Platform" value="MEB"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/18"/>
+          </metadata>
+          <subtests name="FH Position Offen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="61"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="48"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00019" name="Fensterheber Funktionstest 19" starttime="2026-07-15T16:10:00.000+02:00" duration="269" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_C"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/19"/>
+          </metadata>
+          <subtests name="FH Position Komfortoeffnung von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="86"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von FahrerTuer nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="87"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenLinks nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="4"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00020" name="Fensterheber Funktionstest 20" starttime="2026-07-15T16:10:00.000+02:00" duration="238" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V2"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_C"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/20"/>
+          </metadata>
+          <subtests name="FH Position Offen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="16"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Offen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="63"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+      </group>
+      <group name="Lighting">
+        <testCase testCaseId="TC_00021" name="Fensterheber Funktionstest 21" starttime="2026-07-15T16:10:00.000+02:00" duration="299" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V2"/>
+            <metadataItem label="Platform" value="MEB"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/21"/>
+          </metadata>
+          <subtests name="FH Position Komfortoeffnung von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="79"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00022" name="Fensterheber Funktionstest 22" starttime="2026-07-15T16:10:00.000+02:00" duration="249" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/22"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="36"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00023" name="Fensterheber Funktionstest 23" starttime="2026-07-15T16:10:00.000+02:00" duration="122" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V2"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_C"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/23"/>
+          </metadata>
+          <subtests name="FH Position Offen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="33"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenRechts nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="89"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenLinks nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="93"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von HintenLinks nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="65"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00024" name="Fensterheber Funktionstest 24" starttime="2026-07-15T16:10:00.000+02:00" duration="274" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="MEB"/>
+            <metadataItem label="Projekt" value="PROJ_C"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/24"/>
+          </metadata>
+          <subtests name="FH Position Offen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="38"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00025" name="Fensterheber Funktionstest 25" starttime="2026-07-15T16:10:00.000+02:00" duration="54" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="MEB"/>
+            <metadataItem label="Projekt" value="PROJ_A"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/25"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="97"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Offen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="64"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Offen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="70"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+      </group>
+    </group>
+    <group name="Powertrain">
+      <group name="Engine">
+        <testCase testCaseId="TC_00026" name="Fensterheber Funktionstest 26" starttime="2026-07-15T16:10:00.000+02:00" duration="157" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V1"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/26"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="86"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00027" name="Fensterheber Funktionstest 27" starttime="2026-07-15T16:10:00.000+02:00" duration="158" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V1"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/27"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="26"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="10"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00028" name="Fensterheber Funktionstest 28" starttime="2026-07-15T16:10:00.000+02:00" duration="61" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V2"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/28"/>
+          </metadata>
+          <subtests name="FH Position Offen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="28"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="2"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Offen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="41"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00029" name="Fensterheber Funktionstest 29" starttime="2026-07-15T16:10:00.000+02:00" duration="87" initialValuation="FAIL" finalValuation="FAIL" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V2"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_C"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/29"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="67"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von FahrerTuer nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="80"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von BeifahrerTuer nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="88"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenRechts nicht angesteuert, weil FH nicht normiert" initialValuation="FAIL" finalValuation="FAIL" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="92"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00030" name="Fensterheber Funktionstest 30" starttime="2026-07-15T16:10:00.000+02:00" duration="144" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_A"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/30"/>
+          </metadata>
+          <subtests name="FH Position Komfortoeffnung von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="81"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="50"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="30"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+      </group>
+      <group name="Transmission">
+        <testCase testCaseId="TC_00031" name="Fensterheber Funktionstest 31" starttime="2026-07-15T16:10:00.000+02:00" duration="240" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V1"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/31"/>
+          </metadata>
+          <subtests name="FH Position Offen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="84"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Offen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="58"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenRechts korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenRechts"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="11"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00032" name="Fensterheber Funktionstest 32" starttime="2026-07-15T16:10:00.000+02:00" duration="29" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_A"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/32"/>
+          </metadata>
+          <subtests name="FH Position Offen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="25"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00033" name="Fensterheber Funktionstest 33" starttime="2026-07-15T16:10:00.000+02:00" duration="68" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V1"/>
+            <metadataItem label="Platform" value="PPE"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/33"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von BeifahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="BeifahrerTuer"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="61"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Komfortoeffnung von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Komfortoeffnung"/>
+            <subtestItems key="Soll Oeffnung" value="15"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="45"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00034" name="Fensterheber Funktionstest 34" starttime="2026-07-15T16:10:00.000+02:00" duration="8" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V3"/>
+            <metadataItem label="Platform" value="MEB"/>
+            <metadataItem label="Projekt" value="PROJ_C"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/34"/>
+          </metadata>
+          <subtests name="FH Position Offen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="17"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Geschlossen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="49"/>
+            <subtestItems key="Normiert" value="0"/>
+          </subtests>
+        </testCase>
+        <testCase testCaseId="TC_00035" name="Fensterheber Funktionstest 35" starttime="2026-07-15T16:10:00.000+02:00" duration="58" initialValuation="PASS" finalValuation="PASS" type="TestCase">
+          <metadata>
+            <metadataItem label="Variante" value="V1"/>
+            <metadataItem label="Platform" value="MLB"/>
+            <metadataItem label="Projekt" value="PROJ_B"/>
+            <metadataItem label="Link" value="http://exam.internal/tc/35"/>
+          </metadata>
+          <subtests name="FH Position Geschlossen von HintenLinks korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="HintenLinks"/>
+            <subtestItems key="Soll Position" value="Geschlossen"/>
+            <subtestItems key="Soll Oeffnung" value="12"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+          <subtests name="FH Position Offen von FahrerTuer korrekt angesteuert" initialValuation="PASS" finalValuation="PASS" timestamp="2026-07-15T16:14:20.196+02:00[Europe/Berlin]" type="TableSubtest">
+            <subtestItems key="Fenster" value="FahrerTuer"/>
+            <subtestItems key="Soll Position" value="Offen"/>
+            <subtestItems key="Soll Oeffnung" value="67"/>
+            <subtestItems key="Normiert" value="1"/>
+          </subtests>
+        </testCase>
+      </group>
+    </group>
+  </groups>
+</examReport>

@@ -1,0 +1,137 @@
+{
+  "count": 22,
+  "testCases": [
+    {
+      "test_case_id": "TC_00003",
+      "name": "Fensterheber Funktionstest 3",
+      "group_path": "Root / Body / Windows",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00004",
+      "name": "Fensterheber Funktionstest 4",
+      "group_path": "Root / Body / Windows",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00005",
+      "name": "Fensterheber Funktionstest 5",
+      "group_path": "Root / Body / Windows",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00007",
+      "name": "Fensterheber Funktionstest 7",
+      "group_path": "Root / Body / Doors",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00009",
+      "name": "Fensterheber Funktionstest 9",
+      "group_path": "Root / Body / Doors",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00011",
+      "name": "Fensterheber Funktionstest 11",
+      "group_path": "Root / Body / Seats",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00012",
+      "name": "Fensterheber Funktionstest 12",
+      "group_path": "Root / Body / Seats",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00015",
+      "name": "Fensterheber Funktionstest 15",
+      "group_path": "Root / Body / Seats",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00017",
+      "name": "Fensterheber Funktionstest 17",
+      "group_path": "Root / Comfort / Climate",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00019",
+      "name": "Fensterheber Funktionstest 19",
+      "group_path": "Root / Comfort / Climate",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00023",
+      "name": "Fensterheber Funktionstest 23",
+      "group_path": "Root / Comfort / Lighting",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00029",
+      "name": "Fensterheber Funktionstest 29",
+      "group_path": "Root / Powertrain / Engine",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00002",
+      "name": "Fensterheber Funktionstest 2",
+      "group_path": "Root / Body / Windows",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00006",
+      "name": "Fensterheber Funktionstest 6",
+      "group_path": "Root / Body / Doors",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00010",
+      "name": "Fensterheber Funktionstest 10",
+      "group_path": "Root / Body / Doors",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00013",
+      "name": "Fensterheber Funktionstest 13",
+      "group_path": "Root / Body / Seats",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00016",
+      "name": "Fensterheber Funktionstest 16",
+      "group_path": "Root / Comfort / Climate",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00021",
+      "name": "Fensterheber Funktionstest 21",
+      "group_path": "Root / Comfort / Lighting",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00024",
+      "name": "Fensterheber Funktionstest 24",
+      "group_path": "Root / Comfort / Lighting",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00025",
+      "name": "Fensterheber Funktionstest 25",
+      "group_path": "Root / Comfort / Lighting",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00034",
+      "name": "Fensterheber Funktionstest 34",
+      "group_path": "Root / Powertrain / Transmission",
+      "reason": "final verdict FAIL"
+    },
+    {
+      "test_case_id": "TC_00035",
+      "name": "Fensterheber Funktionstest 35",
+      "group_path": "Root / Powertrain / Transmission",
+      "reason": "final verdict FAIL"
+    }
+  ]
+}

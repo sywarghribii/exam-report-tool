@@ -1,0 +1,4 @@
+# Core extraction & analysis need only the Python standard library.
+# These are required for the Excel export and are recommended overall.
+pandas>=1.5
+openpyxl>=3.1

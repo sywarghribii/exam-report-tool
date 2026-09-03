@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="dash-header">
+    <h2>Project Overview</h2>
+    <p class="text-muted">All imported test runs and their overall result</p>
+</div>
+
+<div class="overview-card">
+    <div class="overview-filter">
+        <input type="text" id="planFilter" class="form-control" placeholder="Search by filename...">
+    </div>
+
+    <table class="table overview-table" id="overviewTable">
+       <thead>
+    <tr>
+        <th>Module</th>
+        <th>Last Execution</th>
+        <th>Tests</th>
+        <th>Result</th>
+    </tr>
+</thead>
+<tbody>
+{% for imp in imports %}
+    <tr data-search="{{ imp.module | lower }}">
+        <td><strong>{{ imp.module }}</strong> <span class="text-muted small">({{ imp.full_path }})</span></td>
+        <td>{{ imp.last_execution }}</td>
+        <td>{{ imp.total }}</td>
+        <td>
+            <span class="result-badge {{ 'result-passed' if imp.overall == 'PASSED' else 'result-failed' }}">{{ imp.overall }}</span>
+        </td>
+    </tr>
+{% else %}
+    <tr><td colspan="4" class="text-center text-muted py-4">No modules yet.</td></tr>
+{% endfor %}
+</tbody>
+    </table>
+</div>
+
+<script>
+const planFilter = document.getElementById('planFilter');
+const rows = document.querySelectorAll('#overviewTable tbody tr');
+planFilter.addEventListener('input', () => {
+    const q = planFilter.value.toLowerCase();
+    rows.forEach(r => {
+        if (!r.dataset.search) return;
+        r.style.display = r.dataset.search.includes(q) ? '' : 'none';
+    });
+});
+</script>
+{% endblock %}
