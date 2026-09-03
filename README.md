@@ -157,3 +157,48 @@ any single piece without touching the others.
 python tests/test_toolkit.py     # standalone
 # or:  pytest tests/
 ```
+# EXAM Report Tool
+
+A web application built with Flask to import, analyze, and visualize EXAM test reports.
+
+## Features
+- Import one or multiple EXAM XML reports
+- Test case table with filters and failure details
+- Automatic failure clustering (grouping similar failures)
+- Interactive dashboard with charts (trend over time, per-module results, pass rate)
+- Persistent review/comment system per test case (SQLite)
+- Excel export
+- Compare two runs (fixed / regressed / unchanged tests)
+- Simple rule-based defect classification
+- Built-in chatbot to ask questions about the results
+
+## Installation
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/sywarghribii/exam-report-tool.git
+cd exam-report-tool
+```
+
+### 2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+```
+
+### 3. Run the application
+```bash
+python app.py
+```
+
+### 4. Open in your browser
+http://127.0.0.1:5000
+
+## Tech Stack
+- **Backend**: Python, Flask
+- **Database**: SQLite
+- **Frontend**: HTML, Jinja2, Bootstrap, Chart.js
+- **Core logic**: exam_toolkit (provided report parsing/analysis library)
+
+## Project Structure
