@@ -202,3 +202,5 @@ http://127.0.0.1:5000
 - **Core logic**: exam_toolkit (provided report parsing/analysis library)
 
 ## Project Structure
+## Demo Video
+Watch the full demo here: [https://drive.google.com/file/d/1fls5HplUqhUf1ZaRBhtBOOTwJTWSNFZf/view?usp=sharing]
